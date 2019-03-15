@@ -1,0 +1,36 @@
+{% extends "socialnetwork/base.html" %}
+
+{% block user-info %}
+    <div class="dropdown">
+    <span id="id_logged_in_user_name">Shuning Chen</span>
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown"> <span class='caret'></span></a>
+            <ul class='dropdown-menu'>
+                <li><a id="id_nav_global_stream" href="globalstream">Global Stream</a></li>
+                <li><a id="id_nav_follower_stream" href="followerstream">Follower Stream</a></li>
+                <li><a id="id_nav_profile" href="myprofile">My Profile</a></li>
+                <li><a id="id_nav_logout" href='/'>Logout</a></li>
+            </ul>
+    </div>
+{% endblock %}
+
+{% block content %}
+    <div class="profile_container">
+            <div>
+                <legend class="border-bottom mb-4"><span id='id_user_name'>Profile Page for {{user.first_name}} {{user.last_name}}</span></legend>
+                <div class="image_container">
+                {% load static %} 
+                <img src='{% static "images/tom.jpg"%}' id='id_user_picture'>              
+                </div>
+                <br>
+                <div>
+                     <textarea id='id_user_bio' rows="4" cols="50">
+        Thomas Cruise (born Thomas Cruise Mapother IV on July 3, 1962) is an American actor and producer. He started his career at age 19, in the film Endless Love (1981), before making his breakthrough in the comedy Risky Business (1983).
+                    </textarea>
+                </div> 
+                <br>
+                <div class="follow_div"><button id='id_unfollow'>Unfollow</button>
+<!--                     <button id='id_follow'>Follow</button>-->
+                </div>
+                
+    </div>
+{% endblock %}

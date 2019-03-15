@@ -1,0 +1,45 @@
+{% extends "socialnetwork/base.html" %}
+
+{% block user-info %}
+    <div class="dropdown">
+    <span id="id_logged_in_user_name">Shuning Chen</span>
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown"> <span class='caret'></span></a>
+            <ul class='dropdown-menu'>
+                <li><a id="id_nav_global_stream" href="globalstream">Global Stream</a></li>
+                <li><a id="id_nav_follower_stream" href="followerstream">Follower Stream</a></li>
+                <li><a id="id_nav_profile" href="myprofile">My Profile</a></li>
+                <li><a id="id_nav_logout" href='/'>Logout</a></li>
+            </ul>
+    </div>
+{% endblock %}
+
+{% block content %}
+    <div class="profile_container">
+            <div>
+                <legend class="border-bottom mb-4"><span id='id_user_name'>Profile Page for {{user.first_name}} {{user.last_name}}</span></legend>
+                <div class="image_container">
+                <img src="/static/images/anime.jpg" id='id_user_picture'>
+                </div>
+                <br>
+                <div>
+                    <textarea id='id_bio_text' rows="4" cols="50">
+Shuning Chen is a Graduate student in Heinz College, majoring in information management system.
+</textarea>
+                <br>
+                <form>
+                <span>Profile Picture:&nbsp&nbsp</span>
+                <button type="file" id='id_profile_picture' >Choose File</button>
+                <span>No file chosen</span>
+                <button type='submit' id="id_update_profile_button">Submit</button>
+            </form>
+            </div>
+        <br>
+        You are following:
+            
+        <ul>
+                <li><a href='profile' id='id_profile_link_1'>Olivia Obama</a></li>
+                <li><a href='profile' id='id_profile_link_2'>Placid Bush</a></li>
+                <li><a href='profile' id='id_profile_link_3'>Tom Cruise</a></li>
+        </ul>
+    </div>
+{% endblock %}

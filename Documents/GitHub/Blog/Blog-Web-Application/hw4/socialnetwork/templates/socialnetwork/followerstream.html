@@ -1,0 +1,39 @@
+{% extends "socialnetwork/base.html" %}
+
+{% block user-info %}
+    <div class="dropdown">
+    <span id="id_logged_in_user_name">Shuning Chen</span>
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown"> <span class='caret'></span></a>
+            <ul class='dropdown-menu'>
+                <li><a id="id_nav_global_stream" href="globalstream">Global Stream</a></li>
+                <li><a id="id_nav_follower_stream" href="followerstream">Follower Stream</a></li>
+                <li><a id="id_nav_profile" href="myprofile">My Profile</a></li>
+                <li><a id="id_nav_logout" href='login'>Logout</a></li>
+            </ul>
+    </div>
+{% endblock %}
+
+{% block content %}
+    <h6><b>Global Stream</b></h6>
+    <p></p>
+    <div class="blog_container">
+            <p>Post by <a href='profile'id="id_post_profile_2">{{post2.post_file}}</a> -- <span id='id_post_text_2'>{{post2.post_content}}</span>
+            -- <span id='id_post_date_time_2'>{{post2.post_time}}</span></p>
+        
+            <div class="comment">
+                <ul>
+                    <li>
+                    <p>Comment by <a href='profile' id='id_comment_profile_002'>{{entry2.comment_file}}</a> -- <span id='id_comment_text_002'>{{entry2.comment_content}}</span> -- <span id='id_comment_date_time_002'>{{entry2.comment_time}}</span></p>
+                    </li>
+                </ul>
+            </div>
+            
+        <div class="input-group input-group-sm">
+            <input type="text" id='id_comment_text_2'class="form-control">
+            <span class="input-group-addon">
+                <button type="submit" id='id_comment_button_2'class="btn btn-default" >Comment</button>
+            </span>
+        </div><br>
+            
+    </div>
+{% endblock %}

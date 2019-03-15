@@ -1,0 +1,62 @@
+body {
+  background: #fafafa;
+  color: #333333;
+  margin-top: 5rem;
+}
+
+h6 {
+  color: #485167;
+}
+button{
+    color: #485167;
+    border-radius: 5px;
+    border: 1px solid #dddddd;
+}
+.comments{
+    text-indent: 100px;
+}
+
+.bg-steel{
+  background-color: #cbd5db;
+}
+
+.navbar-nav .nav-link {
+  color: #485167;
+}
+
+.navbar-nav .nav-link:hover {
+  color: #ffffff;
+}
+
+.site-header .navbar-nav .nav-link.active {
+  font-weight: 500;
+}
+.dropdown-menu{
+    padding: 15px 10px;
+}
+
+#id_bio_text #id_user_bio{
+    width: 400px;
+    height:80px;
+}
+.follow_div {
+    text-align: center;
+}
+.errorlist{
+    color: coral;
+}
+.image_container{
+    text-align: center;
+}
+
+img {
+  height: 220px;
+  width: 200px;
+}
+
+.content-section {
+  padding: 15px 20px;
+  border: 1px solid #dddddd;
+  border-radius: 5px;
+  margin-bottom: 10px;
+}
